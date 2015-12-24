@@ -1,0 +1,32 @@
+{
+	  "manifest_version" : 2,
+	  "name": "Article Picker",
+	  "version": "7.2",
+	  "homepage_url":"https://bitbucket.org/newscorp/nc-mansion-wp-cms",
+	  "description": "Extracts Articles from Newscorp web sites.",
+	  "icons": 
+	  {
+	    "16" : "images/document_add_16.png",
+	    "48" : "images/document_add_48.png",
+	    "128" : "images/document_add_256.png" 
+	  },
+	  "permissions": ["tabs", "contextMenus", "<all_urls>"],
+	  "browser_action": 
+	  {
+	    "default_icon": "images/document_add_16.png",
+	    "default_title": "Mansion Global: Article Picker",
+	    "default_popup": "popup.html"
+	  },
+	  "commands": 
+	  {
+          "pick-article": 
+          {
+            "suggested_key": 
+            {
+              "default": "Ctrl+Shift+P",
+              "mac": "Command+Shift+P"
+            },
+            "description": "Newscorp Pick Article"
+          }
+	}
+}

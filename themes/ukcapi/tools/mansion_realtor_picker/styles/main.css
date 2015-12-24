@@ -1,0 +1,78 @@
+body {
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, "HelveticaNeue", "Helvetica Neue", sans-serif;
+    background: #fcfcfc;
+    font-size: 15px;
+}
+
+#message {
+    width: 400px;
+    height: 400px;
+    overflow-x: hidden;
+    padding: 5px 14px 5px 0;
+}
+
+#message h1,
+#message span,
+#message p {
+    padding: 15px;
+}
+#message .keywords {
+    overflow: hidden;
+}
+#message span {
+    font-size: 14px;
+}
+#message h1 {
+    font-size: 18px;
+    margin: 0;
+}
+.loader {
+    position: absolute;
+    top: 25px;
+    left: 180px;
+    display: none;
+}
+.btn-group {
+    padding: 15px;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+#btn-approve {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+#btn-approve:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+#btn-cancel {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+#btn-cancel:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}

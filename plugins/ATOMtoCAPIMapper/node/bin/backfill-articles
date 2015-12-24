@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+var request = require('request');
+var _ = require('lodash');
+var async = require('async');
+var path = require('path');
+var url = require('url');
+
+var ARTICLE_LIST = 'http://sbkcontentsvc.wsjprod.dowjones.net/contentsvco/article/v2/Articles?page.lastDays=' + process.argv[3] + '&media=json';
+
+request.get(ARTICLE_LIST, function(err, res, body) {
+  if (res.statusCode == 200) {
+    var articles = _.pluck(JSON.parse(body).articles, 'baseDocId');
+    async.eachLimit(articles, process.argv[4] || 1, function(id, cb) {
+      var u = url.resolve(process.argv[2], 'api/v1/receiver');
+      console.log('Updating ' + id);
+      request.post({ url: u, json: { articleIds: [id] } }, function(err, res, body) {
+        cb(err);
+      });
+    }, function(err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('Done');
+      }
+    });
+  } else {
+    console.log('Uh oh something didn\'t work');
+    console.log(err);
+  }
+});

@@ -1,0 +1,15 @@
+{
+  "name": "news-uk/wordpress-content-hub",
+  "type": "wordpress-plugin",
+  "description": "WordPress plugin for the Content Hub",
+  "require": {
+    "composer/installers": "v1.0.6",
+    "news-uk/nu-hub-dk-php" : "dev-master#1.1.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "https://github.com/newsinternational/nu-hub-dk-php"
+    }
+  ]
+}

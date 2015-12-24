@@ -1,0 +1,4 @@
+# Created by .gitignore support plugin (hsz.mobi)
+.idea/
+style.css.map
+.sass-cache
